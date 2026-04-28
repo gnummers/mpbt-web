@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DbModule } from './db/db.module';
 import { AuthModule } from './auth/auth.module';
 import { ArticlesModule } from './articles/articles.module';
+import { CharactersModule } from './characters/characters.module';
 import { SetupModule } from './setup/setup.module';
 import { AdminModule } from './admin/admin.module';
 
@@ -12,6 +13,7 @@ import { AdminModule } from './admin/admin.module';
     DbModule,
     AuthModule,
     ArticlesModule,
+    CharactersModule,
     SetupModule,
     AdminModule,
   ],

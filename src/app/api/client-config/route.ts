@@ -20,9 +20,15 @@ export function GET() {
     'http://localhost:3001'
   ).replace(/\/+$/, '');
 
+  const gameApiUrl = (
+    process.env.GAME_API_URL ??
+    'http://localhost:3002'
+  ).replace(/\/+$/, '');
+
   return NextResponse.json({
     version: process.env.npm_package_version ?? '0.1.0',
     apiUrl: publicApiUrl,
+    gameApiUrl,
     gameServer: process.env.GAME_SERVER ?? '127.0.0.1:2000',
   }, { headers: CORS });
 }
